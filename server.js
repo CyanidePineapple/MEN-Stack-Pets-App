@@ -7,7 +7,7 @@ const petController = require('./controllers/petController');
 dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = 4200;
 
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
