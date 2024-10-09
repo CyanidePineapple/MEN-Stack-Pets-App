@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pet.name %></title>
+</head>
+<body>
+    <h1><%= pet.name %> - <%= pet.type %></h1>
+    <p>Age: <%= pet.age %></p>
+    <a href="/pets">Back to Pets</a>
+    <a href="/pets/<%= pet._id %>/edit">Edit</a>
+    <form action="/pets/<%= pet._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete Pet</button>
+    </form>
+</body>
+</html>
