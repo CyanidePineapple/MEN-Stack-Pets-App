@@ -1,5 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width
+<h1>Edit Pet</h1>
+<form action="/pets/<%= pet._id %>?_method=PUT" method="POST">
+  <input type="hidden" name="_method" value="PUT" />
+  <label for="name">Name:</label>
+  <input type="text" name="name" id="name" value="<%= pet.name %>" required />
+
+  <label for="type">Type:</label>
+  <input type="text" name="type" id="type" value="<%= pet.type %>" required />
+
+  <label for="age">Age:</label>
+  <input type="number" name="age" id="age" value="<%= pet.age %>" required />
+
+  <label for="hasOwner">Has Owner:</label>
+  <input type="hidden" name="hasOwner" value="false" />
+  <input type="checkbox" name="hasOwner" value="true" <%= pet.hasOwner ?
+  'checked' : '' %>>
+
+  <button type="submit">Update Pet</button>
+</form>
+<a href="/pets">Back to all pets</a>
